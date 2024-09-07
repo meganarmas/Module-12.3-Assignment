@@ -1,18 +1,17 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AddPost from "./Components/AddPost";
-import DeletePost from "./Components/DeletePost";
-import PostsList from "./Components/Postlist";
+import UpdateAPost from "./Components/UpdatePostForm";
 
 
-const queryClient = new QueryClient();
 
 function App() {
+const queryClient = new QueryClient();
 
   return (
    <QueryClientProvider client={queryClient}>
     <AddPost />
-    <PostsList />
+    <UpdateAPost/>
     </QueryClientProvider>
   );
 };
